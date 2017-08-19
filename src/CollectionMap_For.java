@@ -45,5 +45,28 @@ public class CollectionMap_For {
         for(String i : list){
             System.out.println(i);
         }
+
+
+        // 객체를 담은 map
+        Tiger t = new Tiger(50,100);
+        Tiger t2 = new Tiger(40,80);
+        Map<String,Tiger> map2 = new HashMap<String,Tiger>();
+
+        map2.put("real",t);
+        map2.put("brca",t2);
+
+        System.out.println("keySet : " + map2.keySet());
+        for(String key : map2.keySet()){
+            System.out.println("key : " + key + "  value(weight) : " + map2.get(key).weight + "  value(height) : " + map2.get(key).height);
+        }
+    }
+    static class Tiger{
+        int weight;
+        int height;
+
+        Tiger(int weight, int height){
+            this.weight=weight;
+            this.height=height;
+        }
     }
 }
